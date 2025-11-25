@@ -112,3 +112,47 @@ Agrega la configuración siguiente
 ```bash
 sudo a2ensite domini.local.conf
 ```
+Este comando crea un enlace simbòlico desde  de `/etc/apache2/sites-available/` cap a `/etc/apache2/sites-enabled/`.
+
+## 4. Reiniciar Apache2
+
+Despúes de modificar la configuración, reinicie el servicio para aplicar los lienzos 
+
+```bash
+sudo systemctl restart apache2
+```
+> **Alternativa:** `sudo service apache2 restart` (funciona, pero `systemctl` es el estandard moderno en sistemas basados en systemd).
+
+## 5. Modificar `/etc/hosts` per resoldre el domini localment
+
+```bash
+sudo nano /etc/hosts
+```
+Agrega la linea siguiente
+
+```
+127.0.0.1   www.domini.local domini.local
+```
+
+Esto permite que el navegador encuentre su sitio web en el sentido de que necesita un servidor DNS externo.
+
+## 6. Comprobar el funcionamiento
+
+Abri un navegador y acceder a:
+
+```
+http://www.domini.local
+```
+Si el directorio `/var/www/domini.local` está construido, Apache puede mostrar un error 403 o una lista de directorios ( según la configuración). Para probar wur funciona, crea un ajuste de prueba:
+
+```bash
+echo "<h1>Hola, benvingut domini.local</h1>" | sudo tee /var/www/domini.local/index.html
+```
+Vuelve a cargar la página y verás el mensaje
+
+## 7. Solució de problemes: Registres d’Apache2
+
+Si el bloqueo no funciona consulte los registros de apache
+
+### Registre d’errors
+
