@@ -76,8 +76,16 @@ echo "<?php phpinfo(); ?>" | sudo tee /var/www/html/info.php
 ```
 Visita `http://localhost/info.php` para consultar la información del PHP
 
+# Configuració de VirtualHost amb apache2
+El servidor apache permite el asignar diversos lugares web de forma independiente en una misma máquina. Esta funcionalidad está asociada con **Virtal Host**.
+
+Una vez configurado, podras acceder a su sitio web desde un navegador utilizando su nombre de dominio que tiene establecido (por ejemplo www.domini.local).
 
 
+## 1. Creación de la estructura de directores
 
+``ìntento
+sudo mkdir -p /var/www/domini.local
+```
 
 
