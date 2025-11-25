@@ -11,7 +11,7 @@ sudo apt update && sudo apt upgrade -y
 ```bash
 sudo apt install apache2 -y
 ```
-> Activa y inicialo
+Activa y inicialo
 
 ```bash
 sudo systemctl enable apache2
