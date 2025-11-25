@@ -77,6 +77,14 @@ echo "<?php phpinfo(); ?>" | sudo tee /var/www/html/info.php
 Visita `http://localhost/info.php` para consultar la información del PHP
 
 
+# Configuració de VirtualHost con apache2
+
+**# Configuració de VirtualHost amb apache2**
+
+Para organizar los servidores web, se le recomienda almacenarlos dentro del directorio por defecto de apache `/var/www/`.
+
+Como ejemplo, crear un directorio para el dominio `domini.local`:
+
 
 
 
