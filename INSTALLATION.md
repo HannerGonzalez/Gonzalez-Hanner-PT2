@@ -17,7 +17,7 @@ Activa y inicialo
 sudo systemctl enable apache2
 sudo systemctl start apache2
 ```
-> Verfica el estado
+Verfica el estado
 
 ```bash
 sudo systemctl status apache2
@@ -84,8 +84,31 @@ Una vez configurado, podras acceder a su sitio web desde un navegador utilizando
 
 ## 1. Creación de la estructura de directores
 
-``ìntento
+```ìntento
 sudo mkdir -p /var/www/domini.local
 ```
 
+## 2. Definició del VirtualHost
 
+```bash
+sudo nano /etc/apache2/sites-available/domini.local.conf
+```
+Agrega la configuración siguiente
+
+```apache
+<VirtualHost *:80>
+    ServerAdmin admin@domini.local
+    ServerName www.domini.local
+    ServerAlias domini.local
+    DocumentRoot /var/www/domini.local
+    ErrorLog ${APACHE_LOG_DIR}/domini.local_error.log
+    CustomLog ${APACHE_LOG_DIR}/domini.local_access.log combined
+</VirtualHost>
+```
+> **Recomanació:** Utilitzeu fitxers de registre separats per a cada VirtualHost per facilitar la depuració.
+
+## 3. Habilitar el VirtualHost
+
+```bash
+sudo a2ensite domini.local.conf
+```
