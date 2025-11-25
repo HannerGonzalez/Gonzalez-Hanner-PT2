@@ -156,3 +156,4 @@ Si el bloqueo no funciona consulte los registros de apache
 
 ### Registre d’errors
 
+Contiene mensajes sobre errores de configuración, permisos, ficheros, etc.
