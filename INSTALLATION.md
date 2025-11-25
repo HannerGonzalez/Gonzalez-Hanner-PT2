@@ -1,4 +1,4 @@
-#Instalacion De Lamp
+# Instalacion De Lamp
 
 ### 1. Primero debes actualizar el sistema por si hay actualizaciones las cuales te pueden solucionar futuros problemas
 El comando para hacerlo es el siguiente.
