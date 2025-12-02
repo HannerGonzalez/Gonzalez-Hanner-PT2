@@ -11,6 +11,10 @@
 
 - Una vez creada la carpeta, al lado de ella aparecen `3 puntos`los cuales si los presionas entras a un apartado donde hay varias opciones la cuál entre ellas aparece la opción de compartir
 
-  ![ConfiguraciónShares](Compartir.png)
+  ![ConfiguraciónShares](Imagen/Compartir.png)
 
-## 2. 
+## 2. Crear Usuario
+
+-Para crear un usuario nuevo dentro del NextCloud tienes que acceder al apartado de `All accounts` accediendo a este desde tu perfil, y te aparecerá el apartado de `New account`, en el cuál podrás crear tu usuario con permisos, roles y añadirlos a grupos especificos.
+
+  ![ConfiguraciónShares](Imagen/Compartir.png)
