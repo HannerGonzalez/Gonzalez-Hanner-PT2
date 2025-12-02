@@ -213,7 +213,77 @@ En esta guia explicaré la instalación ar **Nextcloud** o **ownCloud** enun ent
   [https://download.nextcloud.com/server/releases/latest.zip](https://download.nextcloud.com/server/releases/latest.zip)
 
 **ownCloud**: [https://www.owncloud.org](https://www.owncloud.org)  
-  Descàrrega directa (versió estable):  
+  Desccarga directa (versión estable):  
   [https://download.owncloud.com/server/stable/owncloud-complete-20240724.zip](https://download.owncloud.com/server/stable/owncloud-complete-20240724.zip)
+
+> **Nota**: Nextcloud és compatible amb PHP 8.1+, mientras que **ownCloud encara requereix PHP 7.4** en muchas versionses estables. Assegurate de tener la versión de PHP adecuada antes de instalarla.
+
+### 1.2. Pasos de instalación
+
+**Mueve al directorio del host virtual**:
+   ```bash
+   cd /var/www/domini.local
+   ```
+**LImpia el contenido actual** (si hay):
+   > Assegurate que no hay datos importantes antes de ejecutarlo.
+
+ ```bash
+   sudo rm -rf *
+   ```
+
+**Descarga el fichero` .cremallera`** de la plataforma elegida (Nextcloud o ownCloud) a tu sistema.
+
+ ```bash
+    wget https://download.nextcloud.com/server/releases/latest.zip
+   ```
+
+**Descomprime el archivo directamente al directorio**
+
+```bash
+   sudo unzip /ruta/al/arxiu.zip
+   ```
+
+ > Si el archivo crea una carpeta interna (ej: `nextcloud/` o `owncloud/`), asegúrate que el contenido se mueva **al nivel  arrel** del host virtual
+
+```bash
+   sudo mv nextcloud/* . && sudo rmdir nextcloud
+   # o
+   sudo mv owncloud/* . && sudo rmdir owncloud
+   ```
+
+*Puedes hacer eso directamente si tienes que descomprimirlo desde `Descargas`:**
+    ```bash
+   cp -R ~/Descargas/nextcloud/. /var/www/domini.local/.```
+   
+   Elimineu la carpeta `nextcloud` i l'arxiu `latest.zip`
+    ```bash
+    sudo rm -rf ~/Descargas/nextcloud && sudo rm -rf ~/Descargas/latest.zip
+    ```
+
+     **Puedes hacer eso directamente si lo tienes descomprimido en `/var/www/domini.local`:**
+   ```bash
+   cp -R /var/www/domini.local/nextcloud/. /var/www/domini.local/.
+   ```
+
+ Elimina la carpeta `nextcloud` y el archivo `latest.zip`
+    ```bash
+    sudo rm -rf /var/www/domini.local/nextcloud && sudo rm -rf /var/www/domini.local/latest.zip
+    ```
+
+    **Asegura los permisos correctos**:
+   ```bash
+   sudo chown -R www-data:www-data /var/www/domini.local
+   sudo chmod -R 755 /var/www/domini.local
+
+**Accede a la interfaz web**:
+   abre el navegador y visita:
+   ```
+   http://domini.local
+   ```
+   Segueix les instruccions de configuració assistida:
+   - Crea un usuario administrador.
+   - Configura la base de datos (recomendada: MariaDB/MySQL).
+   - Verifica que todos los requisitos del sistema estén completos.
+
 
 
