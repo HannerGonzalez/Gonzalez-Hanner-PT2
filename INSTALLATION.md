@@ -212,6 +212,8 @@ En esta guia explicaré la instalación ar **Nextcloud** o **ownCloud** enun ent
   Descarga directa:  
   [https://download.nextcloud.com/server/releases/latest.zip](https://download.nextcloud.com/server/releases/latest.zip)
 
-
+**ownCloud**: [https://www.owncloud.org](https://www.owncloud.org)  
+  Descàrrega directa (versió estable):  
+  [https://download.owncloud.com/server/stable/owncloud-complete-20240724.zip](https://download.owncloud.com/server/stable/owncloud-complete-20240724.zip)
 
 
