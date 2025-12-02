@@ -154,6 +154,64 @@ Vuelve a cargar la página y verás el mensaje
 
 Si el bloqueo no funciona consulte los registros de apache
 
-### Registre d’errors
+### Registro de errores
 
 Contiene mensajes sobre errores de configuración, permisos, ficheros, etc.
+```bash
+sudo tail -f /var/log/apache2/domini.local_error.log
+```
+### Registro de acceso
+
+Muestra todas las peticiones recibidas por el servidor
+
+```bash
+sudo tail -f /var/log/apache2/domini.local_access.log
+```
+>**Consejo: utiliza `tail -f`para ver las entradas en tiempo real mientras pruebs el lugar
+
+## 8. Assignación de permisos
+
+Apache se ejecuta normalmente con el usuario `www-data`, para asi evitar problemas con permisos, configurar el propietario y los permisos de director de su lugar:
+
+### Cambio de propietario
+
+Permite que el usuario pueda editar ficheros y que el apache los peueda leer:
+
+```bash
+sudo chown -R $USER:www-data /var/www/domini.local
+```
+
+### Establir permisos adequats
+
+Asegúrate de que el propietario y el grupo tengan acceso completamente, y que los demás usuarios solo puedan leer
+
+```bash
+sudo chmod -R 775 /var/www/domini.local
+```
+### Resumen de los pasos claves 
+
+| Crear directorios | `sudo mkdir -p /var/www/domini.local` |
+| Configurar VirtualHost | Editar `/etc/apache2/sites-available/domini.local.conf` |
+| Habilitar lugar | `sudo a2ensite domini.local.conf` |
+| Reiniciar Apache | `sudo systemctl restart apache2` |
+| Añadir dominio a hosts | `127.0.0.1 www.domini.local` a `/etc/hosts` |
+| Verificar permisos | `chown` i `chmod` com s’indica |
+| Depurar errores | Consultar `error.log` i `access.log` |
+
+# Guia d’instal·lació i configuració de plataformes cloud (Nextcloud / ownCloud)  
+
+**Dentro de un host virtual preconfigurado (/var/www/domini.local`)**
+
+En esta guia explicaré la instalación ar **Nextcloud** o **ownCloud** enun entorno donde tienes un **host virtual** apuntante a ant a `/var/www/domini.local` (cómo por ejemplo, `domini.local`). 
+
+## 1. Descarga y instalación de la plataforma cloud
+
+### 1.1. Enllaços oficials
+
+**Nextcloud**: [https://www.nextcloud.com](https://www.nextcloud.com)  
+  Descarga directa:  
+  [https://download.nextcloud.com/server/releases/latest.zip](https://download.nextcloud.com/server/releases/latest.zip)
+
+
+
+
