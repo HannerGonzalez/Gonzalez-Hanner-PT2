@@ -7,6 +7,8 @@
 
 
 - Lo msimo sucede con las carpetas, una vez presionado el apartado `nuevo`, Te aparece la opción de crear carpeta
+-   ![ConfiguraciónShares](Carpeta.png)
+
 - Una vez creada la carpeta, al lado de ella aparecen `3 puntos`los cuales si los presionas entras a un apartado donde hay varias opciones la cuál entre ellas aparece la opción de compartir
 
   ![ConfiguraciónShares]()
