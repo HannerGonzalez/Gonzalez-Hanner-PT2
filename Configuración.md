@@ -26,3 +26,10 @@
 - Una vez ya creados los usuarios nuevos pueden darles permisos dentro del NextCloud
   
   ![ConfiguraciónShares](Imagen/Permisos.png)
+
+  ## Administración
+
+  - En este apartado podremos organizar carpetas para que todo dentro del NextCloud se vea más limpio y organizado
+
+   ![ConfiguraciónShares](Imagen/Administración.png)
+
