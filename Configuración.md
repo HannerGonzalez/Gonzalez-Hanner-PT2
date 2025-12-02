@@ -20,4 +20,8 @@
   ![ConfiguraciónShares](Imagen/Creacióndecuentas.png)
   
 
-  ## 3. 
+  ## 3. Permisos
+
+- Una vez ya creados los usuarios nuevos pueden darles permisos dentro del NextCloud
+  
+  ![ConfiguraciónShares](Imagen/Permisos.png)
