@@ -17,4 +17,7 @@
 
 -Para crear un usuario nuevo dentro del NextCloud tienes que acceder al apartado de `All accounts` accediendo a este desde tu perfil, y te aparecerá el apartado de `New account`, en el cuál podrás crear tu usuario con permisos, roles y añadirlos a grupos especificos.
 
-  ![ConfiguraciónShares](Imagen/Compartir.png)
+  ![ConfiguraciónShares](Imagen/Creacióndecuentas.png)
+  
+
+  ## 3. 
